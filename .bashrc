@@ -211,3 +211,9 @@ fi
 if ! [ -d "$HOME_GIT" ]; then
 	mkdir -vp $HOME_GIT
 fi
+
+# Setup byobu-screen
+if [ ! -d $HOME/.byobu ]; then
+        byobu-ctrl-a screen
+        echo "mousetrack on" >$HOME/.byobu/windows
+fi
